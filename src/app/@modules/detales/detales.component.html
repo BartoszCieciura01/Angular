@@ -1,0 +1,23 @@
+<a routerLink="/list">Wstecz</a>
+<div class="row">
+  <div class="col-md-8 offset-2">
+    <form>
+      <div class="form-group">
+        <label>Waluta</label>
+        <input type="text" class="form-control"  [(ngModel)]="rates.currency" name="first" *ngIf="rates!=null">
+      </div>
+      <div class="form-group">
+        <label>Symbol</label>
+        <input type="text" class="form-control"  [(ngModel)]="rates.code" name="324" *ngIf="rates!=null">
+      </div>
+      <div class="form-group">
+        <label>Aktualna data</label>
+        <input type="text" class="form-control"  [(ngModel)]="rates?.rates[0].effectiveDate" name="secound" *ngIf="rates!=null">
+      </div>
+      <div class="form-group">
+        <label>Aktualny kurs</label>
+        <input type="text" class="form-control"  [(ngModel)]="rates?.rates[0].mid" name="t" *ngIf="rates!=null">
+      </div>
+    </form>
+  </div>
+</div>

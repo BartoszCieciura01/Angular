@@ -1,0 +1,15 @@
+
+<table *ngIf="rates != null" class="" class="table table-bordered table-hover">
+
+  <thead>
+  <tr>
+    <td>#</td>
+    <td>Symbol</td>
+    <td>Waluta</td>
+    <td>Kurs</td>
+  </tr>
+</thead>
+</table>
+
+<app-table-row *ngFor="let item of rates.rates; let i = index;" [item]="item" [counter]="i" (onClickItem)="onClickDetails($event)"></app-table-row>
+
